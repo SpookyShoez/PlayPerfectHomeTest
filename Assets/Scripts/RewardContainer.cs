@@ -1,14 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class RewardContainer : MonoBehaviour, IPointerDownHandler
 {
-    [SerializeField] private TMP_Text _gemValue;
-    [SerializeField] private TMP_Text _cashValue;
-    [SerializeField] private TMP_Text _xpValue;
+    [SerializeField] private Text _gemValue;
+    [SerializeField] private Text _cashValue;
+    [SerializeField] private Text _xpValue;
     
     [SerializeField] private GameObject _cash;
     [SerializeField] private GameObject _gem;
@@ -34,7 +34,6 @@ public class RewardContainer : MonoBehaviour, IPointerDownHandler
     public void UpdateValues()
     {
         // debug
-        Debug.Log($"Current Reward Index: {currentRewardIndex}");
         currentRewardIndex++;
         if (currentRewardIndex >= _rewards.Count)
         {
@@ -42,11 +41,11 @@ public class RewardContainer : MonoBehaviour, IPointerDownHandler
         }
 
         _cashValue.text = _rewards[currentRewardIndex].Cash.ToString();
-        _cashValue.gameObject.SetActive(_rewards[currentRewardIndex].Cash > 0);
+        _cash.gameObject.SetActive(_rewards[currentRewardIndex].Cash > 0);
         _gemValue.text = _rewards[currentRewardIndex].Gem.ToString();
-        _gemValue.gameObject.SetActive(_rewards[currentRewardIndex].Gem > 0);
+        _gem.gameObject.SetActive(_rewards[currentRewardIndex].Gem > 0);
         _xpValue.text = _rewards[currentRewardIndex].Xp.ToString();
-        _xpValue.gameObject.SetActive(_rewards[currentRewardIndex].Xp > 0);
+        _xp.gameObject.SetActive(_rewards[currentRewardIndex].Xp > 0);
     }
 
     public class Reward
