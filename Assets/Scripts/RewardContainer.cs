@@ -33,6 +33,8 @@ public class RewardContainer : MonoBehaviour, IPointerDownHandler
     
     public void UpdateValues()
     {
+        // debug
+        Debug.Log($"Current Reward Index: {currentRewardIndex}");
         currentRewardIndex++;
         if (currentRewardIndex >= _rewards.Count)
         {
