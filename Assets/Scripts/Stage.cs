@@ -12,7 +12,7 @@ public class Stage : MonoBehaviour
     [SerializeField] private GameObject _stateCurrent;
     [SerializeField] private GameObject _stateDone;
 
-    private int _index = 2;
+    private int _index = 0;
     
     private void OnEnable()
     {
