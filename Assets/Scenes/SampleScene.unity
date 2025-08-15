@@ -2779,7 +2779,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _missionHeader: {fileID: 1498737484}
-  _timerText: {fileID: 0}
+  _timerText: {fileID: 1942889279}
   _rewardContainer: {fileID: 0}
   _stages: []
 --- !u!222 &1615958858
@@ -2919,7 +2919,7 @@ GameObject:
   - component: {fileID: 1942889280}
   - component: {fileID: 1942889279}
   m_Layer: 5
-  m_Name: Text
+  m_Name: TimerText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
